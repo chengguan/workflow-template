@@ -1,8 +1,10 @@
 # Multi-agent workflow template
 
-Reference kit for Grok, Claude, and Grok/Claude bots on a multi-year repo.
+A 4,000-line `AGENT-NOTES.md` cost on the order of 90,000 tokens every time a new Grok, Claude, or bot session started — most of it closed work.
 
-Copy `project/` into a product repo. Do not treat this directory as an app.
+The mistake was not taking notes. It was injecting history. This kit injects a briefing (`AGENTS.md` + `docs/NOW.md`) and retrieves the rest.
+
+Copy `project/` into a product repo. Do not treat this directory as an app. MIT licensed.
 
 ```bash
 git clone https://github.com/chengguan/workflow-template.git ~/Projects/workflow-template
@@ -26,6 +28,7 @@ A **thin** Grok skill is worth adding later only as a pointer: “scaffold from 
 workflow-template/
   README.md                 this file (humans)
   HOWTO.md                  start a project or a task
+  LICENSE                   MIT
   AGENTS.md                 kit guard: do not build product here
   instantiate.sh            copy project/ into a dest dir
   project/                  COPY THIS TREE onto a repo root

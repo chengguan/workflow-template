@@ -10,6 +10,4 @@ Do not paste rationale here. Body lives in `docs/decisions/D-NNN-slug.md`.
 
 Agents: do not read this file unless the current task might collide with a past choice. Then open **one** `D-*.md`.
 
-```
-D-001  accepted  {{first real decision, then delete this placeholder line}}
-```
+Start empty. Add a line when the first real decision is written. Do not leave a placeholder `D-001`.
