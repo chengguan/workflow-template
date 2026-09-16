@@ -34,7 +34,7 @@ workflow-template/
   project/                  COPY THIS TREE onto a repo root
     AGENTS.md               durable law + load protocol
     docs/
-      NOW.md                current task only (overwrite)
+      NOW.md                current task + review state (overwrite)
       DECISIONS.md          index, one line each
       WORKFLOW.md           roles, gates, session protocol
       decisions/            D-NNN-slug.md bodies
@@ -54,6 +54,9 @@ Adopting this kit on a repo that already has `AGENT-NOTES.md`: `instantiate.sh` 
 
 1. `AGENTS.md` (auto)
 2. `docs/NOW.md`
-3. Stop
+3. Role (**coder** or **reviewer**) — ask if the user did not name one
+4. Stop
 
-Everything else is retrieved when `NOW.md` names it, or when a task collides with one index line in `DECISIONS.md`.
+Everything else is retrieved when `NOW.md` names it, when a task collides with one index line in `DECISIONS.md`, or — for `docs/WORKFLOW.md` — once the role is about to act on `NOW.md`'s Review state.
+
+Coder implements, writes a review request into `NOW.md`, and does not commit yet. Reviewer reads that request, reviews the working tree (code, security, privacy), and writes comments or a pass into `NOW.md`. They cycle until a pass or contention (CG decides).
